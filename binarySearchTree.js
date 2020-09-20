@@ -44,6 +44,32 @@ and add the newNode to the respective position */
             this.root = newNode;
         else
             this.insertNewNode(this.root, newNode)
+    };
+
+//inOrder(node) method to traverse the binary search tree in inOrder sequence i.e. left>>root>>right
+    inOrder(node) {
+        if(node !== null){
+            this.inOrder(node.left);
+            console.log(node.data);
+            this.inOrder(node.right);
+        }
+    };
+
+//preOrder(node) method to traverse the binary search tree in preOrder sequencing i.e. root>>left>>right
+    preOrder(node) {
+        if(node !== null){
+            console.log(node.data);
+            this.preOrder(node.left);
+            this.preOrder(node.right);
+        };
+    }
+//postOrder(node) method to traverse the binary search tree in postOrder sequencing i.e. left>>right>>root
+    postOrder(node) {
+        if(node !== null){
+            this.postOrder(node.left);
+            this.postOrder(node.right);
+            console.log(node.data);
+        }
     }
 };
 
@@ -53,4 +79,9 @@ bst1.insert(20);
 bst1.insert(9);
 bst1.insert(23);
 bst1.insert(22);
-console.log(bst1);
+bst1.insert(26);
+bst1.insert(13);
+bst1.insert(6);
+
+// console.log(bst1);
+bst1.postOrder(bst1.root);
