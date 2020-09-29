@@ -70,7 +70,15 @@ and add the newNode to the respective position */
             this.postOrder(node.right);
             console.log(node.data);
         }
-    }
+    };
+
+    findMinimum(node) {
+        if(node.left != null) {
+            this.findMinimum(node.left)
+        } else {
+            return node.data;
+        }
+    };
 };
 
 //Test cases:
@@ -85,3 +93,6 @@ bst1.insert(6);
 
 // console.log(bst1);
 bst1.postOrder(bst1.root);
+
+console.log('minimum is '+bst1.findMinimum(bst1.root));
+// console.log(bst1.root.left.data);
