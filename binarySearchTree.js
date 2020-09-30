@@ -72,6 +72,7 @@ and add the newNode to the respective position */
         }
     };
 
+//findMinimum(node) method to find the minimum key from the tree.
     findMinimum(node) {
         if(node.left == null) {
             return node.data;
@@ -80,13 +81,27 @@ and add the newNode to the respective position */
         }
     };
 
+//findMaximum(node) method to find the maximum key from the tree.
     findMaximum(node) {
         if(node.right == null) {
             return node.data;
         } else {
             return this.findMaximum(node.right);
         }
+    };
+
+//height(node) method to return the height of the tree.
+    height(node) {
+        if(node == null) {
+            return 0;
+        } else {
+            let lheight = this.height(node.left);
+            let rheight = this.height(node.right);
+
+            return lheight > rheight ? lheight+1 : rheight+1;
+        }
     }
+
 };
 
 //Test cases:
@@ -105,3 +120,4 @@ bst1.postOrder(bst1.root);
 
 console.log('minimum is '+bst1.findMinimum(bst1.root));
 console.log('maximum is '+bst1.findMaximum(bst1.root));
+console.log("Height of tree is "+bst1.height(bst1.root));
