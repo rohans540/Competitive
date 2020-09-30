@@ -100,6 +100,27 @@ and add the newNode to the respective position */
 
             return lheight > rheight ? lheight+1 : rheight+1;
         }
+    };
+
+//printGivenLevel(node, level) method to print all the nodes at a given level in tree
+    printGivenLevel(node, level) {
+        if(node == null) {
+            return;
+        }
+        if(level == 1) {
+            console.log(node.data);
+        }
+        else if(level > 1) {
+            this.printGivenLevel(node.left, level-1);
+            this.printGivenLevel(node.right, level-1);
+        }
+    };
+
+//printLevelOrder() method to print the level order (BFS) traversal of a binary tree
+    printLevelOrder() {
+        let h = this.height(this.root);
+        for(let i = 0; i <= h; ++i)
+            this.printGivenLevel(this.root, i);
     }
 
 };
@@ -121,3 +142,6 @@ bst1.postOrder(bst1.root);
 console.log('minimum is '+bst1.findMinimum(bst1.root));
 console.log('maximum is '+bst1.findMaximum(bst1.root));
 console.log("Height of tree is "+bst1.height(bst1.root));
+console.log("The level order traversal is below...");
+console.log(bst1.printLevelOrder());
+// console.log(bst1.printGivenLevel(bst1.root.left, 2));
