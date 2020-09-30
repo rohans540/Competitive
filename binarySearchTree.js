@@ -73,12 +73,20 @@ and add the newNode to the respective position */
     };
 
     findMinimum(node) {
-        if(node.left != null) {
-            this.findMinimum(node.left)
-        } else {
+        if(node.left == null) {
             return node.data;
+        } else {
+            return this.findMinimum(node.left);
         }
     };
+
+    findMaximum(node) {
+        if(node.right == null) {
+            return node.data;
+        } else {
+            return this.findMaximum(node.right);
+        }
+    }
 };
 
 //Test cases:
@@ -88,6 +96,7 @@ bst1.insert(9);
 bst1.insert(23);
 bst1.insert(22);
 bst1.insert(26);
+bst1.insert(3);
 bst1.insert(13);
 bst1.insert(6);
 
@@ -95,4 +104,4 @@ bst1.insert(6);
 bst1.postOrder(bst1.root);
 
 console.log('minimum is '+bst1.findMinimum(bst1.root));
-// console.log(bst1.root.left.data);
+console.log('maximum is '+bst1.findMaximum(bst1.root));
