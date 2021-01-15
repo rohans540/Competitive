@@ -7,4 +7,4 @@ const removeAllSpaces = (text) => {
     return newStr;
 }
 
-console.log(removeAllSpaces("My name is Rohan"));
+console.log(removeAllSpaces("    g  f     g"));
