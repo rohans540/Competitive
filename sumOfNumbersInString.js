@@ -13,4 +13,4 @@ function findSum(str) {
     return sum;
 };
 
-console.log(findSum("I have 300 copies of 20 books"));
+console.log(findSum("I have 800 copies of 32 books published in 20 countries by 8 different authors."));
