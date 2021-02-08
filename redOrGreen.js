@@ -4,7 +4,7 @@
 function redOrGreen(str) {
     let g = 0;
     for(let i in str) {
-        if(str[i] === 'G')
+        if(str[i].toUpperCase() === 'G')
             g += 1;
     }
     if(g >= str.length/2) {
@@ -14,5 +14,5 @@ function redOrGreen(str) {
     }
 }
 
-console.log(redOrGreen("RGGRGRG"));
+console.log(redOrGreen("ggggrr"));
 
