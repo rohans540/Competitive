@@ -1,4 +1,12 @@
+//Author: Rohan Sharma
+//Date: 12 Feb, 2021
+//Problem name: Object Parsing recursively.
+
+
+//Object to store the new resultant object
 var newObj = {};
+
+//Function to parse the object recursively and made keys with appended subkeys
 function parseObjectAndPrint(obj, parent) {
     for(key in obj) {
         if(typeof obj[key] === 'object') {
@@ -10,6 +18,7 @@ function parseObjectAndPrint(obj, parent) {
     return newObj;
 };
 
+//Example Object
 const user = {
     name: {
         first: "Rohan",
@@ -29,4 +38,5 @@ const user = {
     profession: "Web Engineer"
 }
 
+//Diver code
 console.log(parseObjectAndPrint(user, "user"));
