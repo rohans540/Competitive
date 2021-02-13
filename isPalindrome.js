@@ -20,5 +20,22 @@ function isPalindromeStrReverse(str) {
     return str === revStr;
 }
 
-console.log(isPalindrome("madam"));
+function isPalindromeRecursive(str, s, e) {
+    if(s === e) {
+        return true;
+    }
+
+    if(str[s] !== str[e]){
+        return false;
+    }
+
+    if(s < e + 1){
+        isPalindromeRecursive(str, s+1, e-1);
+    }
+    return true;
+}
+
+const s = "madam";
+console.log(isPalindrome("a"));
 console.log(isPalindromeStrReverse("malayalam"));
+console.log(isPalindromeRecursive(s, 0, s.length-1));
