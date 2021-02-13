@@ -1,3 +1,11 @@
+//Author: Rohan Sharma
+//Problem statement: Given a number with odd number of digits find whether the sum of left side of digits are equal to the sum of the right
+//side of digits
+
+
+//function to calculate whether the sum of LHS digits are equal to the RHS digits
+//input: number of String format
+//output: Boolean value
 function balancedNumbers(num) {
     let leftNum = 0;
     let rightNum = 0;
