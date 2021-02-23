@@ -1,3 +1,5 @@
+//Iterative solution.
+
 // function revStr(st) {
 //     let res = '';
 //     if(st.length > 0) {
@@ -10,6 +12,8 @@
 //     };
 // }
 
+//Recursive Solution.
+
 function revStr(str) {
     if(str.length === 1) {
         return str[str.length - 1];
@@ -18,4 +22,5 @@ function revStr(str) {
     }
 }
 
+//Driver code.
 console.log(revStr("Rohan"));

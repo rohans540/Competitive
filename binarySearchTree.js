@@ -137,11 +137,11 @@ bst1.insert(13);
 bst1.insert(6);
 
 // console.log(bst1);
-bst1.postOrder(bst1.root);
+bst1.inOrder(bst1.root);
 
-console.log('minimum is '+bst1.findMinimum(bst1.root));
-console.log('maximum is '+bst1.findMaximum(bst1.root));
-console.log("Height of tree is "+bst1.height(bst1.root));
-console.log("The level order traversal is below...");
-console.log(bst1.printLevelOrder());
+// console.log('minimum is '+bst1.findMinimum(bst1.root));
+// console.log('maximum is '+bst1.findMaximum(bst1.root));
+// console.log("Height of tree is "+bst1.height(bst1.root));
+// console.log("The level order traversal is below...");
+// console.log(bst1.printLevelOrder());
 // console.log(bst1.printGivenLevel(bst1.root.left, 2));

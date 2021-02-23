@@ -11,14 +11,14 @@ function isPalindrome(str) {
     return true;
 };
 
-function isPalindromeStrReverse(str) {
-    revStr = '';
-    for(let i = str.length-1; i >=0; --i){
-        revStr += str[i];
-    };
-    console.log(revStr);
-    return str === revStr;
-}
+// function isPalindromeStrReverse(str) {
+//     revStr = '';
+//     for(let i = str.length-1; i >=0; --i){
+//         revStr += str[i];
+//     };
+//     console.log(revStr);
+//     return str === revStr;
+// }
 
 function isPalindromeRecursive(str, s, e) {
     if(s === e) {
