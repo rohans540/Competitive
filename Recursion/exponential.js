@@ -6,15 +6,30 @@
 //     return result;
 // }
 
-function findExponentVal(n, x) {
+// function findExponentVal(n, x) {
+//     if(x === 0) {
+//         return 1;
+//     }
+//     if(x === 1){
+//         return n;
+//     } else {
+//         return n*findExponentVal(n, x-1);
+//     }
+// }
+
+function exponentialLogn(n, x) {
     if(x === 0) {
         return 1;
     }
-    if(x === 1){
+    if(x === 1) {
         return n;
+    }
+    const temp = exponentialLogn(n, x/2);
+    if(x%2 === 0) {
+        return temp*temp;
     } else {
-        return n*findExponentVal(n, x-1);
+        return n*temp*temp;
     }
 }
 
-console.log(findExponentVal(9, 0));
+console.log(exponentialLogn(2, 3));
