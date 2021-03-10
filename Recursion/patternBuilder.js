@@ -7,4 +7,11 @@ function makePattern(n) {
     }
 }
 
-makePattern(3);
+function makePatternInverse(n, k) {
+    if(n === 0) return;
+    console.log("* ".repeat(k));
+    makePatternInverse(n-1, k+1);
+}
+
+// makePattern(3);
+makePatternInverse(5, 1);
