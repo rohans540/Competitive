@@ -1,9 +1,10 @@
+const appState = require('./scope');
 function a() {
     var b = 10;
-    c();
     function c() {
-        console.log(b);
+        console.log(appState.state.name);
     }
+    c();
 }
 
 a();
