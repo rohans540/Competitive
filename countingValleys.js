@@ -20,17 +20,18 @@ function countingValleys(steps, path) {
     let stepsCount = steps;
     let valleys = 0;
 
-    for(let i = 0; i < steps; ++i) {
-        if(path[i] === 'U') {
-            stepsCount++;
+    path.forEach(step => {
+        if(step === 'U') {
+            stepsCount += 1;
             if(stepsCount === steps) {
                 valleys += 1;
             }
         }
-        if(path[i] === 'D') {
-            stepsCount--;
+        if(step === 'D') {
+            stepsCount -= 1;
         }
-    }
+    })
+
     return valleys;
 }
 
